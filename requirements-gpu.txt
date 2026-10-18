@@ -1,0 +1,10 @@
+# Optional replacement for CPU ONNX Runtime. See Setup.ps1 -Gpu.
+onnxruntime-gpu==1.23.2
+nvidia-cublas-cu12==12.9.2.10
+nvidia-cuda-nvrtc-cu12==12.9.86
+nvidia-cuda-runtime-cu12==12.9.79
+nvidia-cudnn-cu12==9.26.0.51
+nvidia-cufft-cu12==11.4.1.4
+nvidia-curand-cu12==10.3.10.19
+nvidia-nvjitlink-cu12==12.9.86
+onnx==1.19.1

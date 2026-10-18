@@ -1,0 +1,20 @@
+name: Feature proposal
+description: A focused improvement with a concrete use case
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and user workflow
+      description: Explain what you are trying to do and where the current behavior falls short.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior and alternatives
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Performance, privacy and compatibility considerations

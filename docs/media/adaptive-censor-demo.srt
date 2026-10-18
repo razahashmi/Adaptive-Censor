@@ -1,0 +1,79 @@
+1
+00:00:00,000 --> 00:00:03,000
+Adaptive Censor. Your media. Your rules.
+
+2
+00:00:03,000 --> 00:00:06,000
+Content warning: adult kissing, a filtered fictional organ prop, and original audio containing profanity.
+
+3
+00:00:06,000 --> 00:00:12,000
+Adult kissing: original and strong blur. Manually reviewed timing.
+
+4
+00:00:12,000 --> 00:00:18,000
+Fictional organ prop: light blur, strong blur, regional blur, concealment.
+
+5
+00:00:18,000 --> 00:00:21,000
+Choose picture and sound independently for each category.
+
+6
+00:00:21,000 --> 00:00:23,000
+Real player on a reviewed timeline: light blur, strength 20.
+
+7
+00:00:23,000 --> 00:00:25,000
+Medium blur, strength 40.
+
+8
+00:00:25,000 --> 00:00:27,000
+Strong blur, strength 100.
+
+9
+00:00:27,000 --> 00:00:29,000
+Complete concealment.
+
+10
+00:00:29,000 --> 00:00:32,000
+Original film audio: “I was young, and a dick.”
+
+11
+00:00:32,000 --> 00:00:35,000
+Filtered audio: “I was young, and a [BEEP].”
+
+12
+00:00:35,000 --> 00:00:38,000
+Filtered audio: “I was young, and a [MUTED].”
+
+13
+00:00:38,000 --> 00:00:40,500
+Staged false match: a clean moment was concealed.
+
+14
+00:00:40,500 --> 00:00:43,000
+One click saves a local mistake report.
+
+15
+00:00:43,000 --> 00:00:46,000
+Exclude the incorrect interval. Picture restored. No automatic training.
+
+16
+00:00:46,000 --> 00:00:49,000
+Run locally. Try the controls demo, then add models for your own media.
+
+17
+00:00:49,000 --> 00:00:52,000
+Contribute reviewed examples, code and hardware tests. Measure misses and speed.
+
+18
+00:00:52,000 --> 00:00:55,000
+Home use today: export MP4s. Household streaming is planned.
+
+19
+00:00:55,000 --> 00:00:59,000
+Try the preview. Help improve it: github.com/razahashmi/Adaptive-Censor
+
+20
+00:00:59,000 --> 00:01:03,000
+Kissing: Anna Tarazevich / Pexels. Film: Tears of Steel, (CC) Blender Foundation, CC BY 3.0.

@@ -1,0 +1,5 @@
+# Keep published files consistent with the canonical release manifest on all systems.
+* text=auto eol=lf
+docs/media/adaptive-censor-demo.mp4 -text
+docs/media/adaptive-censor-preview.gif -text
+docs/media/adaptive-censor-poster.png -text

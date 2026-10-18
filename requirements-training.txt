@@ -1,0 +1,5 @@
+-r requirements.txt
+-r requirements-learned.txt
+scikit-learn==1.9.1
+onnx==1.19.1
+# Install torch==2.11.0 from the CUDA 12.8 wheel index in Setup.ps1 -Training.

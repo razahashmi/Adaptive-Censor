@@ -1,0 +1,25 @@
+name: Bug report
+description: A reproducible player, installation or feedback issue
+body:
+  - type: markdown
+    attributes:
+      value: "Use generated or redistributable media. Do not upload private clips, transcripts, runtime folders or raw feedback. Remove personal paths and tokens from logs. Follow SECURITY.md for vulnerabilities."
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Preview version, Windows/Python/browser version, CPU/GPU and relevant settings
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps, expected result and actual result
+      description: Include a small generated-media reproduction if possible
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Sanitized errors (optional)
+      description: Review for private information before submitting

@@ -1,0 +1,23 @@
+name: Model or evaluation proposal
+description: Evidence for a detector change or public evaluation
+body:
+  - type: textarea
+    id: identity
+    attributes:
+      label: Model identities, licenses and exact analysis configuration
+    validations:
+      required: true
+  - type: textarea
+    id: data
+    attributes:
+      label: Annotation provenance, category support and title-level splits
+      description: Distinguish assistant drafts, human review, development data and independent evaluation.
+    validations:
+      required: true
+  - type: textarea
+    id: metrics
+    attributes:
+      label: Misses, incorrect filtering, pixel coverage, full-pipeline speed and memory
+      description: Report unknowns and absent categories; do not use aggregate clean-frame accuracy as a safety claim.
+    validations:
+      required: true

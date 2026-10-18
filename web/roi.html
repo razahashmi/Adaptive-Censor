@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Anatomy crop review · Adaptive Censor</title><link rel="stylesheet" href="roi.css"><script type="module" src="roi.mjs?v=2"></script></head>
+<body><main><a href="label.html">Video labels</a> · <a href="masks.html">Outline review</a><h1>Review anatomy crops</h1>
+<p>Mark the detector crop as exposed target anatomy or covered / look-alike. Targets are female nipples, genitals, anus or bare buttocks. Male chests, cleavage and clothing are negatives. Use Unsure when you cannot tell.</p>
+<label>Project <select id="project"></select></label><p id="progress" aria-live="polite"></p>
+<section class="pictures"><figure><img id="local" alt="Detector crop"><figcaption>Detector crop</figcaption></figure><figure><img id="body" alt="Surrounding body context"><figcaption>Surrounding context</figcaption></figure></section>
+<p id="detail"></p><div class="actions"><button id="previous">Previous</button><button data-label="1">Exposed · 1</button><button data-label="0">Covered / look-alike · 0</button><button data-label="unsure">Unsure · U</button><button id="next">Next</button></div>
+<p id="status" role="status"></p><p>Each choice saves to the server before advancing. No files need to be downloaded or copied.</p></main></body></html>

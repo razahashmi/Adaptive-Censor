@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "name": "public-starter-1",
+  "split": "development",
+  "review": {
+    "status": "assistant_draft",
+    "reviewer": null,
+    "independent": false,
+    "note": "Visual references and word times drafted by the coding assistant. A human reviewer must verify boundaries and ambiguous content before using these as ground truth."
+  },
+  "sources": {
+    "kissing": {
+      "filename": "pexels-5763324.mp4",
+      "sha256": "f937d4aeb4e02ac15330f5ff3d10c81089844f4d5acc6dbc3f2d197f16530666",
+      "url": "https://videos.pexels.com/video-files/5763324/5763324-hd_1920_1080_24fps.mp4",
+      "source_page": "https://www.pexels.com/video/close-up-video-of-people-kissing-5763324/",
+      "license": "LicenseRef-Pexels",
+      "license_url": "https://www.pexels.com/license/",
+      "attribution": "Anna Tarazevich / Pexels"
+    },
+    "film": {
+      "filename": "tears-of-steel-720p.mov",
+      "sha256": "efa9062d9cdb7a338e40ad530dfdf234806743f29ae6a1a136b97ece4e588e8f",
+      "url": "https://download.blender.org/demo/movies/ToS/tears_of_steel_720p.mov",
+      "source_page": "https://mango.blender.org/",
+      "license": "CC-BY-3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "attribution": "(CC) Blender Foundation | mango.blender.org"
+    }
+  },
+  "cases": [
+    {
+      "id": "kissing",
+      "source": "kissing",
+      "start": 0,
+      "end": 8,
+      "reviewed": [
+        "kissing",
+        "nudity",
+        "sexual_activity",
+        "violence"
+      ],
+      "events": {
+        "kissing": [
+          [
+            4.2,
+            5.46
+          ],
+          [
+            6.85,
+            8
+          ]
+        ]
+      }
+    },
+    {
+      "id": "clean-dialogue",
+      "source": "film",
+      "start": 27.2,
+      "end": 30.2,
+      "reviewed": [
+        "language",
+        "kissing",
+        "nudity",
+        "sexual_activity",
+        "violence",
+        "gore"
+      ],
+      "events": {}
+    },
+    {
+      "id": "profanity",
+      "source": "film",
+      "start": 357.8,
+      "end": 360.8,
+      "reviewed": [
+        "language",
+        "kissing",
+        "nudity",
+        "sexual_activity",
+        "violence",
+        "gore"
+      ],
+      "events": {
+        "language": [
+          [
+            2.46,
+            2.74
+          ]
+        ]
+      }
+    },
+    {
+      "id": "organ-prop",
+      "source": "film",
+      "start": 57,
+      "end": 61,
+      "reviewed": [
+        "kissing",
+        "nudity",
+        "sexual_activity"
+      ],
+      "events": {},
+      "note": "Healthy fictional brain prop is not labeled graphic injury; gore is deliberately unreviewed."
+    },
+    {
+      "id": "action",
+      "source": "film",
+      "start": 465,
+      "end": 473,
+      "reviewed": [],
+      "events": {},
+      "note": "Review violence boundaries before scoring; unknown is not clean."
+    }
+  ]
+}

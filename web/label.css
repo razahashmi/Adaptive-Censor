@@ -1,0 +1,46 @@
+.labeling header{height:auto;min-height:72px;padding:14px 2vw}.labeling .header-right{gap:16px}.labeling .header-right select{min-width:180px}
+#save-state{font:11px ui-monospace,monospace;color:var(--muted)}
+.label-main{max-width:none;padding:18px 2vw;display:grid;grid-template-columns:250px minmax(0,1fr) 300px;gap:18px;align-items:start}
+.label-main>#notice{grid-column:1/-1}
+#notice{border:1px solid var(--amber);color:var(--amber);border-radius:10px;padding:10px 14px}
+#action-error,#recovery{border:1px solid var(--amber);color:var(--amber);border-radius:10px;padding:10px 14px;font-size:13px}
+#finish-hint{margin:8px 0;font-size:13px}#recovery button{margin-right:8px}#recovery p{margin:0 0 8px}
+.panel{border:1px solid var(--line);background:var(--panel);border-radius:14px;padding:14px}
+.window-list{position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto;padding:10px}
+.list-filters{display:flex;gap:10px;align-items:center;font-size:12px;margin-bottom:8px}
+#windows{list-style:none;margin:0;padding:0}
+#windows li{display:grid;grid-template-columns:10px 1fr auto;gap:8px;align-items:center;padding:6px 8px;border-radius:8px;cursor:pointer;font-size:12px}
+#windows li:hover{background:#222b38}#windows li.current{background:#2a3546;outline:1px solid var(--green)}
+#windows li small{color:var(--muted);font:10px ui-monospace,monospace}
+.dot{width:8px;height:8px;border-radius:50%;background:#465344}.dot.started{background:var(--amber)}.dot.complete{background:var(--green)}
+.clip-heading{display:flex;justify-content:space-between;align-items:end;margin-bottom:8px}.clip-heading h2{margin:0;font-size:20px}
+#split-badge{font:11px ui-monospace,monospace;border:1px solid var(--line);border-radius:6px;padding:3px 8px}
+#split-badge.test{border-color:var(--amber);color:var(--amber)}
+.clip-frame{position:relative;background:#070b11;border:1px solid var(--line);border-radius:12px;overflow:hidden;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center}
+.clip-frame video{width:100%;height:100%;object-fit:contain;display:block}
+.clip-frame.context video{opacity:.55}
+#context-badge{position:absolute;top:10px;left:10px;background:#000c;color:var(--amber);font:11px ui-monospace,monospace;padding:4px 8px;border-radius:6px}
+.label-transport{display:flex;gap:8px;align-items:center;margin:10px 0;flex-wrap:wrap}
+.label-transport #clock,.label-transport #watched{font:12px ui-monospace,monospace;color:var(--muted)}
+#watched.ok{color:var(--green)}
+#lanes{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:10px;background:#141a23;cursor:pointer}
+#category-rows{display:grid;gap:6px;margin-top:10px}
+.category-row{display:grid;grid-template-columns:22px 150px 1fr auto auto;gap:10px;align-items:center;padding:6px 10px;border:1px solid var(--line);border-radius:10px;background:#161d27}
+.category-row.selected{border-color:var(--green);background:#1b2530}
+.category-row strong{display:flex;gap:6px;align-items:center}
+.category-row kbd{font:11px ui-monospace,monospace;color:var(--muted)}
+.category-row .summary{color:var(--muted);font-size:12px}
+.category-row button{padding:4px 10px;font-size:12px}
+.category-row button.on{background:var(--green);color:#16281b;border-color:var(--green)}
+.category-row button.unsure.on{background:var(--amber);border-color:var(--amber)}
+.swatch{width:12px;height:12px;border-radius:3px}
+.selection-bar{display:flex;gap:10px;align-items:center;margin-top:10px;font-size:12px;color:var(--muted);flex-wrap:wrap}
+#in-point{color:var(--amber);font-family:ui-monospace,monospace}
+.done-row{display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap}
+.note-label{display:grid;gap:4px;margin-top:12px;font-size:12px;color:var(--muted)}
+.note-label input{background:#11161e;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:8px}
+.label-help{position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto;font-size:12px}
+.label-help dl{margin:0 0 14px}.label-help dt{font-weight:650;margin-top:8px}.label-help dd{margin:2px 0 0;color:var(--muted)}
+.label-help ul{padding-left:16px;margin:0 0 14px}
+.keys{border-collapse:collapse;width:100%}.keys td{padding:2px 4px;border-bottom:1px solid #232c39}.keys td:first-child{font-family:ui-monospace,monospace;white-space:nowrap;color:var(--green)}
+@media (max-width:1100px){.label-main{grid-template-columns:1fr}.window-list,.label-help{position:static;max-height:none}}

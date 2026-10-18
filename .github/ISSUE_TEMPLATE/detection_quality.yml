@@ -1,0 +1,30 @@
+name: Filtering / detection quality
+description: A missed moment or incorrect filter with permitted evidence
+body:
+  - type: markdown
+    attributes:
+      value: Player reports stay local. Do not attach private clips, raw reports, unlicensed media or private transcripts. Use a public licensed example or a sanitized description with precise settings.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Error type
+      options:
+        - Incorrect filtering
+        - Missed content
+        - Wrong interval boundary
+        - Wrong region or incomplete coverage
+    validations:
+      required: true
+  - type: textarea
+    id: config
+    attributes:
+      label: Version, category, models, thresholds, policy and hardware
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Reproduction and permitted source / exact interval
+      description: State what should happen, whether labels are human-reviewed, and source rights.
+    validations:
+      required: true

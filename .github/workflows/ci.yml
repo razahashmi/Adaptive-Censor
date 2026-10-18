@@ -1,0 +1,64 @@
+name: Preview checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  windows-cpu:
+    runs-on: windows-latest
+    timeout-minutes: 25
+    env:
+      HF_HUB_OFFLINE: '1'
+      HF_HUB_DISABLE_TELEMETRY: '1'
+      TRANSFORMERS_OFFLINE: '1'
+      ADAPTIVE_CENSOR_WORKDIR: ${{ runner.temp }}/adaptive-censor-ci
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '22'
+      - name: Install isolated CPU dependencies
+        shell: pwsh
+        run: |
+          python -m venv .ci-venv
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          .\.ci-venv\Scripts\python.exe -m pip install -r requirements-cpu-win-py313.lock.txt
+          exit $LASTEXITCODE
+      - name: Runtime and generated-media tests
+        shell: pwsh
+        run: .\.ci-venv\Scripts\python.exe -m unittest discover -p 'test_*.py' -q
+      - name: Browser-module tests
+        shell: pwsh
+        run: |
+          $webTests = @(Get-ChildItem web -Filter '*.test.mjs' | ForEach-Object FullName)
+          node --test @webTests
+          exit $LASTEXITCODE
+      - name: Build audited source
+        shell: pwsh
+        run: .\.ci-venv\Scripts\python.exe build_source_release.py --output dist
+      - name: Smoke test the extracted release
+        shell: pwsh
+        run: .\.ci-venv\Scripts\python.exe release_smoke.py dist/adaptive-censor-0.3.0-preview.1-source.zip --report dist/release-smoke.json
+      - name: Build and check native Windows setup helper
+        shell: pwsh
+        run: |
+          .\.ci-venv\Scripts\python.exe build_windows_release.py dist/adaptive-censor-0.3.0-preview.1-source.zip
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          Expand-Archive -LiteralPath dist/adaptive-censor-0.3.0-preview.1-windows-setup.zip -DestinationPath "$env:RUNNER_TEMP/setup-check"
+          $helper = Join-Path $env:RUNNER_TEMP 'setup-check/Adaptive Censor Setup.exe'
+          $receipt = Join-Path $env:RUNNER_TEMP 'setup-self-test.json'
+          $result = Start-Process -FilePath $helper -ArgumentList @('--self-test', '--report', $receipt) -WindowStyle Hidden -PassThru -Wait
+          if ($result.ExitCode -ne 0) { exit $result.ExitCode }
+          Get-Content -LiteralPath $receipt
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: adaptive-censor-source-preview
+          path: dist/
+          if-no-files-found: error

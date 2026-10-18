@@ -1,0 +1,29 @@
+name: Installation / hardware report
+description: Help verify a clean installation or diagnose setup
+body:
+  - type: markdown
+    attributes:
+      value: Remove names, paths, tokens and private recordings from all attachments. A new virtual environment on an existing machine is not a clean-OS test.
+  - type: dropdown
+    id: setup_type
+    attributes:
+      label: Installation environment
+      options:
+        - Clean Windows machine / fresh OS
+        - Existing machine, new installation folder
+        - Upgrade of existing installation
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Windows, Python, application version and CPU/GPU
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Setup steps, download/storage/time and result
+      description: Include whether the controls demo, restart and model setup worked.
+    validations:
+      required: true

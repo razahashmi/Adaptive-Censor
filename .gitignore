@@ -1,0 +1,71 @@
+.venv/
+.runtime/
+__pycache__/
+*.pyc
+*.onnx
+*.bin
+.pytest_cache/
+# Generated outputs and local training artifacts
+/demo-filtered.mp4
+/speech-filtered.mp4
+.train-venv/
+training-runs/
+.claude/launch.json
+# Public release outputs and isolated validation environments
+/dist/
+/.ci-venv/
+/.release-env/
+# Private collections and credentials must never enter source control.
+/.env
+/.env.*
+/feedback/
+/labeling/
+/roi/
+/segmentation/
+*.sqlite3
+*.sqlite3-journal
+# Private media and downloaded model formats (already tracked history needs its own audit).
+*.mp4
+*.mkv
+*.mov
+*.mp3
+*.wav
+*.m4a
+*.jpg
+*.jpeg
+*.png
+*.safetensors
+*.gguf
+*.pt
+*.pth
+*.log
+*.avi
+*.webm
+*.m4v
+*.mpeg
+*.mpg
+*.flac
+*.ogg
+*.opus
+*.aac
+*.aif
+*.aiff
+*.gif
+*.webp
+*.bmp
+*.tif
+*.tiff
+*.srt
+*.vtt
+/outputs/
+/datasets/
+/private/
+/sample-media/
+# The only distributable media are the explicitly licensed, audited demo assets.
+!/docs/media/adaptive-censor-demo.mp4
+!/docs/media/adaptive-censor-preview.gif
+!/docs/media/adaptive-censor-poster.png
+
+# Reviewed public showcase captions only.
+!/docs/media/adaptive-censor-demo.srt
+!/docs/media/adaptive-censor-demo.vtt

@@ -1,0 +1,3 @@
+# Optional offline draft-mask environment; matches torch==2.11.0 from Setup.ps1.
+# Install from the official CUDA 12.8 index; this does not change player dependencies.
+torchvision==0.26.0

@@ -1,0 +1,2 @@
+# Player learned-feature support. ONNX weights are installed separately.
+transformers==4.57.6

@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "license": "MIT AND LicenseRef-Pexels AND CC-BY-3.0",
+  "sources": {
+    "kissing": {
+      "title": "Close Up Video of People Kissing",
+      "attribution": "Anna Tarazevich / Pexels",
+      "source_url": "https://www.pexels.com/video/close-up-video-of-people-kissing-5763324/",
+      "source_download_url": "https://videos.pexels.com/video-files/5763324/5763324-hd_1920_1080_24fps.mp4",
+      "source_sha256": "f937d4aeb4e02ac15330f5ff3d10c81089844f4d5acc6dbc3f2d197f16530666",
+      "license": "LicenseRef-Pexels",
+      "license_url": "https://www.pexels.com/license/",
+      "license_evidence": "https://www.pexels.com/license/",
+      "source_intervals_seconds": [
+        [
+          0,
+          6
+        ]
+      ]
+    },
+    "film": {
+      "title": "Tears of Steel (2012)",
+      "attribution": "(CC) Blender Foundation | mango.blender.org",
+      "source_url": "https://mango.blender.org/",
+      "source_download_url": "https://download.blender.org/demo/movies/ToS/tears_of_steel_720p.mov",
+      "source_sha256": "efa9062d9cdb7a338e40ad530dfdf234806743f29ae6a1a136b97ece4e588e8f",
+      "license": "CC-BY-3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "license_evidence": "https://mango.blender.org/sharing/",
+      "source_intervals_seconds": [
+        [
+          57,
+          61
+        ],
+        [
+          357.8,
+          360.8
+        ]
+      ]
+    }
+  },
+  "verified_date": "2026-10-18",
+  "credits_file": "docs/MEDIA_CREDITS.md",
+  "duration_seconds": 63,
+  "changes": "Clean opening title with open-source branding; MIT-licensed code wording only on the end card; separate content warning before footage; one silent kissing excerpt; four-panel organ-prop filter collage; control illustration; edited authentic player screenshots; staged false-match reporting and exclusion; real profanity original/beeped/muted; captions and layouts. Compact source credits appear only on the final card; no repeated footer.",
+  "demonstration": "Manually reviewed visual and speech intervals through the actual renderer. UI chapters use edited authentic stills on a manual timeline; the false match is deliberately staged. No automatic-recognition, speed or accuracy claim; no synthetic voice.",
+  "ui_capture_manifest_sha256": "e84d70ee23d18e8f7f98a69280062e67240204264abb0a1e98d58bdbb6204c6f",
+  "reviewed_intervals": {
+    "kissing": [
+      4.05,
+      5.65
+    ],
+    "speech_in_excerpt": [
+      2.36,
+      2.9
+    ],
+    "collage": [
+      0,
+      4
+    ]
+  },
+  "assets": {
+    "docs/media/adaptive-censor-demo.mp4": {
+      "sha256": "73dd3050f4fa7e5a45269bf5ca2ac6f4bb7e3403e97190462622727ef9b7e9da",
+      "bytes": 2558816,
+      "sources": [
+        "kissing",
+        "film"
+      ],
+      "licenses": [
+        "CC-BY-3.0",
+        "LicenseRef-Pexels",
+        "MIT"
+      ]
+    },
+    "docs/media/adaptive-censor-preview.gif": {
+      "sha256": "e0b43b5492ea769379153b8f9210d2e2b98d5ff77bdc0d7e95140680e05c6e45",
+      "bytes": 1092864,
+      "sources": [
+        "kissing"
+      ],
+      "licenses": [
+        "LicenseRef-Pexels",
+        "MIT"
+      ]
+    },
+    "docs/media/adaptive-censor-poster.png": {
+      "sha256": "06b8961a52da74c161ac2cbaf912a0e108e2c3321cb1823e7dde14e46fafefa1",
+      "bytes": 47106,
+      "sources": [],
+      "licenses": [
+        "MIT"
+      ]
+    }
+  }
+}
