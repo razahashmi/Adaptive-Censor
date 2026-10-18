@@ -13,7 +13,6 @@ jobs:
       HF_HUB_OFFLINE: '1'
       HF_HUB_DISABLE_TELEMETRY: '1'
       TRANSFORMERS_OFFLINE: '1'
-      ADAPTIVE_CENSOR_WORKDIR: ${{ runner.temp }}/adaptive-censor-ci
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -24,6 +23,11 @@ jobs:
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: '22'
+      - name: Use an isolated runtime
+        shell: pwsh
+        run: |
+          $runtimePath = Join-Path $env:RUNNER_TEMP 'adaptive-censor-ci'
+          Add-Content -LiteralPath $env:GITHUB_ENV -Value "ADAPTIVE_CENSOR_WORKDIR=$runtimePath" -Encoding utf8
       - name: Install isolated CPU dependencies
         shell: pwsh
         run: |
