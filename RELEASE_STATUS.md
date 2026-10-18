@@ -2,8 +2,9 @@
 
 Publication destination: **https://github.com/razahashmi/Adaptive-Censor**, preview tag `v0.3.0-preview.1`. This release is prepared from an audited public copy, preserving the repository's initial license/README commit and adding no private development history. Hosted CI status is available in [Actions](https://github.com/razahashmi/Adaptive-Censor/actions/workflows/ci.yml); consult the actual run for its result.
 
-## Verified locally
+## Verified checks
 
+- GitHub-hosted Windows CPU validation passed: [18 October run for commit 98b98e8](https://github.com/razahashmi/Adaptive-Censor/actions/runs/39135850762). It installed the pinned CPU dependencies, ran runtime/browser tests, built the audited source, checked extracted-player behavior, and compiled/self-tested the native Windows setup helper. This is a hosted-runner check, not an independent full GUI or fresh-OS/model-download signoff.
 - Windows, 64-bit Python 3.13.9, CPU dependencies in an isolated environment. **223 runtime tests completed successfully, with seven optional training-dependency skips**. All **53 browser-module tests** passed. Skips do not establish training/GPU compatibility.
 - The native Windows .NET setup helper compiled and passed a headless checksum/Python self-test. It requires existing Python 3.13, downloads dependencies/models separately, is unsigned, and bundles no third-party runtime. GUI operation and independent clean-Windows installation are not established by that test.
 - The source builder uses an explicit allowlist, checks Python syntax, audits personal paths/common credentials, rejects links/private runtime paths, and binds three licensed binary showcase assets to exact hashes and individual source terms. Private media, datasets, downloaded weights, runtime environments and development Git history are excluded. The public starter's draft annotation manifest and diagnostic report are intentional public research examples, not private labels.
@@ -14,7 +15,6 @@ Publication destination: **https://github.com/razahashmi/Adaptive-Censor**, prev
 
 ## Still pending
 
-- A successful hosted Windows CI result must be checked in Actions. The workflow builds source/native artifacts and checks their extracted behavior; local tests alone do not establish a hosted pass.
 - Independent testing on a clean Windows OS, first-time model downloads and the full native setup interaction. A new virtual environment on the development machine is not a clean OS.
 - Optional GPU/training installations, other operating systems/Python versions, long-run recovery, and sustained live or multi-user capacity.
 - Independent category-level recognition evaluation, moving-pixel coverage, detector qualification or a 95% accuracy result. No new detector is promoted by these packaging/documentation changes.
